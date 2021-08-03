@@ -1,3 +1,4 @@
+import 'package:bills/src/app_config.dart';
 import 'package:flutter/material.dart';
 
 class KTopBar extends StatelessWidget {
@@ -8,7 +9,7 @@ class KTopBar extends StatelessWidget {
     return Column(
       children: [
         _buildTopSpacer(context),
-        _buildTopBar(),
+        _buildTopBar(context),
       ],
     );
   }
@@ -19,7 +20,7 @@ class KTopBar extends StatelessWidget {
     );
   }
 
-  Widget _buildTopBar() {
+  Widget _buildTopBar(BuildContext context) {
     return Container(
       padding: const EdgeInsets.all(25.0),
       margin: const EdgeInsets.only(bottom: 25.0),
@@ -30,7 +31,7 @@ class KTopBar extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                'Bills App',
+                AppConfig.of(context)?.displayName ?? 'Bills App',
                 style: TextStyle(
                   color: Colors.grey.shade700,
                 ),

@@ -6,7 +6,7 @@ import 'package:bills/src/app.dart';
 void main() {
   runApp(
     AppConfig(
-      displayName: 'Bills App',
+      displayName: 'Bills App [DEV]',
       child: KApp(),
     ),
   );
